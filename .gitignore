@@ -1,0 +1,17 @@
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+build.xml
+
+# Gradle files
+.gradle/
+build/
+app/build
