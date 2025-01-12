@@ -3,8 +3,8 @@
 
     <application
         android:allowBackup="true"
-        android:label="Hello World"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:label="CodeRunner"
+        android:theme="@style/DarkTheme">
         <activity android:name=".MainActivity"
             android:exported="true"> 
             <intent-filter>
