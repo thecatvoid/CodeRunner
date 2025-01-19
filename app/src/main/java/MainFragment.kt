@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import com.code.runner.R
+import android.graphics.Color
 
 class MainFragment : Fragment() {
 
@@ -17,8 +18,11 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val scrollView = ScrollView(context)
+        scrollView.setBackgroundColor(Color.BLACK)
+        
         val linearLayout = LinearLayout(context)
         linearLayout.orientation = LinearLayout.VERTICAL
+        linearLayout.setBackgroundColor(Color.BLACK)
 
         val editText = EditText(context)
         editText.hint = "Enter text here"
@@ -29,6 +33,8 @@ class MainFragment : Fragment() {
         editText.isVerticalScrollBarEnabled = true
         editText.setScroller(android.widget.Scroller(context))
         editText.isScrollContainer = true
+        editText.setBackgroundColor(Color.BLACK)
+        editText.setTextColor(Color.WHITE)
 
         linearLayout.addView(editText)
         scrollView.addView(linearLayout)
