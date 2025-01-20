@@ -9,6 +9,7 @@ tasks:
       sudo chown -R $USER:$USER /opt/
       wget "https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip" -O latest.zip
       unzip latest.zip
+      rm -f latest.zip
       mv cmdline-tools /opt/
       export PATH="/opt/cmdline-tools/bin:$PATH"
       yes | sdkmanager --licenses --sdk_root=/opt/android-sdk
