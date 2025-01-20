@@ -10,7 +10,6 @@
 /captures
 .externalNativeBuild
 .cxx
-local.properties
 *.ap_
 
 # Files for the Dalvik VM
