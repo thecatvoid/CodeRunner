@@ -9,17 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository
+      # Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Step 2: Set up JDK 17
-      - name: Set up JDK 17
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-
-      # Step 3: Set up Android SDK
+      # Set up Android SDK
       - name: Set up Android SDK
         run: |
           echo "Installing Android SDK"
@@ -30,11 +24,11 @@ jobs:
           sudo chown -R $USER:$USER /opt/android-sdk
 
 
-      # Step 4: Build the APK
+      # Build the APK
       - name: Build APK
         run: ./gradlew build
 
-      # Step 5: Upload the APK as a GitHub Release
+      # Upload the APK as a GitHub Release
       - name: Create GitHub Release
         id: release
         run: |
