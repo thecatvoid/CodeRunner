@@ -1,4 +1,4 @@
-image: gitpod/workspace-ubuntu-22.04
+image: ubuntu
 
 tasks:
   - init: |
