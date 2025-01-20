@@ -1,4 +1,4 @@
-image: ubuntu
+image: gitpod/workspace-base
 
 tasks:
   - init: |
