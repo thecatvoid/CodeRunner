@@ -29,7 +29,6 @@ jobs:
           export PATH="/opt/cmdline-tools/bin:$PATH"
           yes | sdkmanager --licenses --sdk_root=/opt/android-sdk
           sdkmanager --sdk_root=/opt/android-sdk "platform-tools" "build-tools;30.0.3" "platforms;android-30"
-          sed -i 's/org.gradle.java.home.*//' gradle.properties
 
       # Build the APK
       - name: Build APK

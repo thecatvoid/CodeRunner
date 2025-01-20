@@ -1,6 +1,5 @@
 *.iml
 .gradle
-/local.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -13,9 +12,6 @@
 .cxx
 local.properties
 *.ap_
-
-# Gitpod
-.gitpod.yml
 
 # Files for the Dalvik VM
 *.dex
