@@ -15,3 +15,4 @@ cd $HOME
 git clone https://www.github.com/thecatvoid/dot
 cp -a dot/.* ./
 nvim -c 'PlugInstall' -c 'qa'
+nvim -c 'TSInstall kotlin' -c 'qa'
