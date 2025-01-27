@@ -1,48 +1,41 @@
-package com.code.runner.ui
+package com.code.runner.Editor
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.ScrollView
+import com.onegravity.rteditor.RTEditText
 import com.code.runner.R
-import android.graphics.Color
 
-class MainFragment : Fragment() {
+class Editor : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val scrollView = ScrollView(context)
-        scrollView.setBackgroundColor(Color.BLACK)
-        
-        val linearLayout = LinearLayout(context)
-        linearLayout.orientation = LinearLayout.VERTICAL
-        linearLayout.setBackgroundColor(Color.BLACK)
+        // Inflate the layout
+        val view = inflater.inflate(R.layout.editor, container, false)
 
-        val editText = EditText(context)
-        editText.hint = "Enter text here"
-        editText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_FLAG_MULTI_LINE
-        editText.minLines = 3
-        editText.maxLines = Integer.MAX_VALUE
-        editText.setPadding(16, 16, 16, 16)
-        editText.isVerticalScrollBarEnabled = true
-        editText.setScroller(android.widget.Scroller(context))
-        editText.isScrollContainer = true
-        editText.setBackgroundColor(Color.BLACK)
-        editText.setTextColor(Color.WHITE)
+        // Find the RTEditText by its ID
+        val editText: RTEditText = view.findViewById(R.id.editText)
 
-        linearLayout.addView(editText)
-        scrollView.addView(linearLayout)
+        // Handle tapping anywhere inside the RTEditText to position the cursor
+        editText.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                val x = event.x.toInt()
+                val y = event.y.toInt()
+                val offset = editText.getOffsetForPosition(x.toFloat(), y.toFloat())
+                editText.setSelection(offset)
+            }
+            false
+        }
 
-        return scrollView
+        return view
     }
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = Editor()
     }
 }
