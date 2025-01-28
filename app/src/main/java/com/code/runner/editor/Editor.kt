@@ -1,4 +1,4 @@
-package com.code.runner.Editor
+package com.code.runner.editor
 
 import android.os.Bundle
 import android.view.LayoutInflater

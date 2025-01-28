@@ -2,7 +2,7 @@ package com.code.runner
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.code.runner.Editor
+import com.code.runner.editor.Editor
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
