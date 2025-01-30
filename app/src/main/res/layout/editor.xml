@@ -10,14 +10,17 @@
         android:orientation="vertical"
         android:background="#000000">
         
-        <com.onegravity.rteditor.RTEditText
+        <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Type something here..."
-            android:inputType="textMultiLine|textAutoCorrect|textCapSentences" 
             android:textColor="@android:color/white"
+            android:gravity="top"
+            android:padding="16dp"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:background="@android:color/transparent"
             android:textSize="16sp"/>
-
     </LinearLayout>
 </ScrollView>
