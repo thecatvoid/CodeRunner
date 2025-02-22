@@ -11,5 +11,10 @@
 *.jar           binary
 
 # Ignore templates sample code snippets
+# Will be collapsed in diffs
 src/main/assets/templates/* linguist-vendored
+
+# Ignore scripts
+# Will be expanded as normal in diffs
+src/main/assets/scripts/* linguist-generated
 
