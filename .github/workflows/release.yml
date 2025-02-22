@@ -39,7 +39,7 @@ jobs:
       id: release
       run: |
         code="$(grep 'versionName = [0-9]*' build.gradle.kts \
-              | grep -o '".*"' | sed 's/\"//g'")
+              | grep -o '".*"' | sed 's/\"//g')"
         TAG="v${code}"
         gh release create "$TAG" build/outputs/apk/release/*.apk \
           --title "Release $TAG" \
