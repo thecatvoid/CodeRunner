@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <uses-permission android:name="com.termux.permission.RUN_COMMAND" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Legacy permission -->
+        <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- All Files Acess -->
+
+        <application
+                android:allowBackup="true"
+                android:icon="@mipmap/icon"
+                android:label="coderunner"
+                android:theme="@style/AppTheme">
+
+                <activity
+                        android:name=".MainActivity"
+                        android:exported="true">
+
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+                                <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+                </activity>
+
+                <activity
+                        android:name=".EditorActivity"
+                        android:theme="@style/SplashTheme"
+                        android:exported="false" />
+
+                <activity
+                        android:name=".TerminalActivity"
+                        android:theme="@style/SplashTheme"
+                        android:exported="false" />
+
+                <activity
+                        android:name=".PermissionActivity"
+                        android:theme="@style/SplashTheme"
+                        android:exported="false" />
+
+        </application>
+
+
+        <queries>
+                <package android:name="com.termux" />
+        </queries>
+
+</manifest>

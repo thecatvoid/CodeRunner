@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+                android:id="@+id/action_save"
+                android:icon="@android:drawable/ic_menu_save"
+                android:title="Save"
+                app:showAsAction="ifRoom" />
+        <item
+                android:id="@+id/action_run"
+                android:icon="@drawable/ic_play_arrow"
+                android:title="Run"
+                app:showAsAction="ifRoom" />
+        <item
+                android:id="@+id/action_open"
+                android:title="Open File"
+                android:icon="@drawable/ic_folder"
+                app:showAsAction="always" />
+</menu>
