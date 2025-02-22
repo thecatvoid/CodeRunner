@@ -11,5 +11,5 @@
 *.jar           binary
 
 # Ignore templates sample code snippets
-templates/* linguist-vendored
+src/main/assets/templates/* linguist-vendored
 
