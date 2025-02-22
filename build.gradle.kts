@@ -19,7 +19,7 @@ android {
         minSdk = 24
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.1.0-alpha"
     }
 
     // Load properties from local.properties
